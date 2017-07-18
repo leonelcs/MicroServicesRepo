@@ -20,7 +20,7 @@ java -jar target/website-1.0.jar
 
 4. Open Browser Window and paste below URL.
 
-http://localhost:8001
+http://localhost:12000
 
 5. When asked for credentials use guest/guest123
 
