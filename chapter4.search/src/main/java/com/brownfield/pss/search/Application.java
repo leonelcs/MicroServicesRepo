@@ -35,6 +35,7 @@ public class Application implements CommandLineRunner {
 		flights.add(new Flight("BF102", "CHI","SFO","22-JAN-16",new Fares("102", "USD"),new Inventory(100)));
 		flights.add(new Flight("BF103", "HOU","SFO","22-JAN-16",new Fares("103", "USD"),new Inventory(100)));
 		flights.add(new Flight("BF104", "LAX","SFO","22-JAN-16",new Fares("104", "USD"),new Inventory(100)));
+		flights.add(new Flight("BF171", "GRU","FOR","12-NOV-17",new Fares("503", "BRL"),new Inventory(100)));
 	    
 		flightRepository.save(flights);
 		

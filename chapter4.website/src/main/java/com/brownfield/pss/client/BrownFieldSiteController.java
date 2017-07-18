@@ -71,11 +71,13 @@ public class BrownFieldSiteController {
 		try { 
 			//long bookingId = bookingClient.postForObject("http://book-service/booking/create", booking, long.class); 
 			 bookingId = bookingClient.postForObject("http://localhost:8060/booking/create", booking, long.class); 
-			logger.info("Booking created "+ bookingId);
+			 logger.info("Booking created "+ bookingId);
+			 model.addAttribute("message", "Your Booking is confirmed. Reference Number is "+ bookingId);
 		}catch (Exception e){
 			logger.error("BOOKING SERVICE NOT AVAILABLE...!!!");
+			model.addAttribute("message", "BOOKING SERVICE NOT AVAILABLE...!!!");
 		}
-		model.addAttribute("message", "Your Booking is confirmed. Reference Number is "+ bookingId);
+
 		return "confirm";
    }
    @RequestMapping(value="/search-booking", method=RequestMethod.GET)
